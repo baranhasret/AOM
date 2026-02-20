@@ -1,0 +1,103 @@
+import { Award, CheckCircle, Zap, Wind, Battery } from 'lucide-react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Delta Electronics Türkiye Distribtörü - PLC, Inverter, HMI | AOM Engineering',
+  description: 'Delta DVP serisi PLC, VFD inverter, HMI paneller, servo motor sürücüleri yetkili satıcısı. Uygun fiyatlı otomasyon çözümleri.',
+  keywords: 'delta plc, delta inverter, dvp plc, delta vfd, delta hmi, delta türkiye, delta distribtör, delta servo',
+  alternates: {
+    canonical: 'https://angoraotomasyon.com/markalarimiz/delta',
+  },
+};
+
+export default function DeltaDetailPage() {
+  return (
+    <div className="pt-24 min-h-screen bg-gray-50 relative overflow-hidden">
+      {/* Canlı Gradient ve Dekoratif Daireler */}
+      <div className="absolute inset-0 top-20 z-0">
+        <div className="w-full h-full bg-gradient-to-br from-blue-500 via-blue-200 to-white opacity-90 blur-[2px]" />
+        <div className="absolute left-[-120px] top-[-80px] w-[400px] h-[400px] bg-gradient-to-br from-blue-600 via-blue-400 to-cyan-400 opacity-40 rounded-full blur-3xl" />
+        <div className="absolute right-[-100px] bottom-[-100px] w-[350px] h-[350px] bg-gradient-to-tr from-cyan-400 via-blue-300 to-blue-300 opacity-30 rounded-full blur-2xl" />
+        <div className="absolute left-1/2 top-1/3 w-[200px] h-[200px] bg-gradient-to-br from-blue-200 to-cyan-200 opacity-30 rounded-full blur-2xl" style={{transform:'translateX(-50%)'}} />
+      </div>
+      {/* Breadcrumb */}
+      <div className="relative z-10 bg-white border-b border-gray-100">
+        <div className="max-w-full mx-auto px-8 py-4">
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Ana Sayfa</Link>
+            <span>•</span>
+            <Link href="/markalarimiz" className="hover:text-blue-600">Markalarımız</Link>
+            <span>•</span>
+            <Link href="/markalarimiz/teknoloji-ortaklarimiz" className="hover:text-blue-600">Teknoloji Ortaklarımız</Link>
+            <span>•</span>
+            <span className="text-gray-900 font-medium">DELTA</span>
+          </div>
+        </div>
+      </div>
+      {/* Hero Section */}
+      <section className="relative z-10 bg-transparent py-16">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-8">
+          <img src="/images/delta.png" alt="DELTA" className="w-32 h-32 object-contain rounded-2xl shadow-lg mb-4 bg-white/80 p-2" />
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-2">DELTA</h1>
+          <p className="text-xl text-red-600 font-semibold mb-4">Endüstriyel Otomasyon ve Enerji Yönetimi</p>
+          <p className="text-gray-700 text-lg max-w-2xl mb-6">
+            Delta, endüstriyel otomasyon, enerji yönetimi ve akıllı üretim teknolojilerinde global liderdir. Yenilikçi çözümleriyle sanayide verimlilik, sürdürülebilirlik ve dijital dönüşüm sağlar.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <div className="bg-red-50 rounded-xl px-6 py-4 flex items-center gap-3 shadow">
+              <Award size={20} className="text-yellow-500" />
+              <span className="text-gray-800 font-medium">Dijital dönüşüm lideri</span>
+            </div>
+            <div className="bg-red-50 rounded-xl px-6 py-4 flex items-center gap-3 shadow">
+              <CheckCircle size={20} className="text-green-500" />
+              <span className="text-gray-800 font-medium">Geniş ürün portföyü</span>
+            </div>
+            <div className="bg-red-50 rounded-xl px-6 py-4 flex items-center gap-3 shadow">
+              <Battery size={20} className="text-red-500" />
+              <span className="text-gray-800 font-medium">Enerji verimli otomasyon</span>
+            </div>
+            <div className="bg-red-50 rounded-xl px-6 py-4 flex items-center gap-3 shadow">
+              <Zap size={20} className="text-pink-500" />
+              <span className="text-gray-800 font-medium">Yüksek kalite ve güvenilirlik</span>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/urunler?marka=delta" className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg shadow">
+              Ürünler
+            </Link>
+            <Link href="/iletisim" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-lg shadow">
+              Teklif Talep Et
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* Avantajlar */}
+      <section className="relative z-10 max-w-5xl mx-auto py-12 px-4 md:px-0">
+        <div className="bg-white/80 rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-red-700 mb-6">Delta ile Çalışmanın Avantajları</h2>
+          <ul className="grid md:grid-cols-2 gap-6 text-gray-700 text-base">
+            <li>
+              <span className="font-semibold">Dijitalleşme Liderliği:</span> Endüstri 4.0 ve akıllı üretim çözümleri.
+            </li>
+            <li>
+              <span className="font-semibold">Geniş Ürün Yelpazesi:</span> Otomasyon, enerji ve yazılım çözümleri.
+            </li>
+            <li>
+              <span className="font-semibold">Enerji Verimliliği:</span> Sürdürülebilir ve çevreci teknolojiler.
+            </li>
+            <li>
+              <span className="font-semibold">Teknik Destek:</span> Global servis ve mühendislik desteği.
+            </li>
+            <li>
+              <span className="font-semibold">Yenilikçi Çözümler:</span> Sürekli Ar-Ge ve inovasyon.
+            </li>
+            <li>
+              <span className="font-semibold">Yüksek Güvenilirlik:</span> Endüstriyel standartlarda kalite ve dayanıklılık.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  );
+}

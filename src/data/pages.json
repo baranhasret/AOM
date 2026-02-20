@@ -1,0 +1,106 @@
+{
+  "anasayfa": {
+    "sections": [
+      {
+        "title": "Ana Sayfa Başlığı",
+        "content": "Ana sayfa içerik metni.",
+        "image": "",
+        "meta": "Ana sayfa meta açıklaması.",
+        "keywords": "ana sayfa, hoşgeldiniz",
+        "seoTitle": "Ana Sayfa SEO Başlığı"
+      }
+    ]
+  },
+  "kurumsal": {
+    "sections": [
+      {
+        "title": "Kurumsal Başlığı",
+        "content": "Kurumsal sayfa içerik metni.",
+        "image": "",
+        "meta": "Kurumsal meta açıklaması.",
+        "keywords": "şirket, kurumsal, profil",
+        "seoTitle": "Kurumsal SEO Başlığı"
+      },
+      {
+        "title": "Vizyonumuz",
+        "content": "Vizyon metni burada.",
+        "image": "",
+        "meta": "Vizyon meta açıklaması.",
+        "keywords": "vizyon, hedef",
+        "seoTitle": "Vizyon SEO Başlığı"
+      }
+    ]
+  },
+  "cozumler": {
+    "sections": [
+      {
+        "title": "Çözümlerimiz Başlığı",
+        "content": "Çözümlerimiz sayfa içerik metni.",
+        "image": "",
+        "meta": "Çözüm meta açıklaması.",
+        "keywords": "çözüm, hizmet",
+        "seoTitle": "Çözüm SEO Başlığı"
+      }
+    ]
+  },
+  "markalar": {
+    "sections": [
+      {
+        "title": "Markalarımız Başlığı",
+        "content": "Markalarımız sayfa içerik metni.",
+        "image": "",
+        "meta": "Marka meta açıklaması.",
+        "keywords": "marka, ürün",
+        "seoTitle": "Marka SEO Başlığı"
+      }
+    ]
+  },
+  "urunler": {
+    "sections": [
+      {
+        "title": "Ürünler Başlığı",
+        "content": "Ürünler sayfa içerik metni.",
+        "image": "",
+        "meta": "Ürün meta açıklaması.",
+        "keywords": "ürün, kategori",
+        "seoTitle": "Ürün SEO Başlığı"
+      }
+    ]
+  },
+  "projeler": {
+    "sections": [
+      {
+        "title": "Projelerimiz Başlığı",
+        "content": "Projelerimiz sayfa içerik metni.",
+        "image": "",
+        "meta": "Proje meta açıklaması.",
+        "keywords": "proje, referans",
+        "seoTitle": "Proje SEO Başlığı"
+      }
+    ]
+  },
+  "referanslar": {
+    "sections": [
+      {
+        "title": "Referanslarımız Başlığı",
+        "content": "Referanslarımız sayfa içerik metni.",
+        "image": "",
+        "meta": "Referans meta açıklaması.",
+        "keywords": "referans, müşteri",
+        "seoTitle": "Referans SEO Başlığı"
+      }
+    ]
+  },
+  "iletisim": {
+    "sections": [
+      {
+        "title": "İletişim Başlığı",
+        "content": "İletişim sayfa içerik metni.",
+        "image": "",
+        "meta": "İletişim meta açıklaması.",
+        "keywords": "iletişim, adres, telefon",
+        "seoTitle": "İletişim SEO Başlığı"
+      }
+    ]
+  }
+}
