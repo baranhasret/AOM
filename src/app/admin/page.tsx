@@ -6,14 +6,12 @@ function ProductManager() {
   const [openBrand, setOpenBrand] = useState<string | null>(null);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [products, setProducts] = useState<Array<{id:number; name:string; code:string; image:string; brand:string; desc:string; category:string}>>([]);
-  const [loading, setLoading] = useState(true);
   // Ürünleri API'den yükle
   useEffect(() => {
     fetch('/api/products')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
-        setLoading(false);
       });
   }, []);
   const [name, setName] = useState('');
@@ -77,8 +75,8 @@ function ProductManager() {
       imageUrl = data.url;
       setUploading(false);
     }
-    let method = editId !== null ? 'PUT' : 'POST';
-    let url = '/api/products';
+    const method = editId !== null ? 'PUT' : 'POST';
+    const url = '/api/products';
     const res = await fetch(url, {
       method,
       headers: { 'Content-Type': 'application/json' },

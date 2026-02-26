@@ -52,6 +52,7 @@ export default function GlobalError({
                 <span>Tekrar Dene</span>
               </button>
               
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a
                 href="/"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all border border-white/20"

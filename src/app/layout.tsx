@@ -21,6 +21,7 @@ function WhatsAppFloatingButton() {
   );
 }
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -172,7 +173,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
         <GoogleAnalytics />
-        <AnalyticsTracker />
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+        </Suspense>
         <Header />
 
         <WhatsAppFloatingButton />
