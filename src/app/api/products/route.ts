@@ -1,15 +1,21 @@
 import { NextResponse } from 'next/server';
-import { put, list } from '@vercel/blob';
+import { put, list, del } from '@vercel/blob';
 import localProducts from '@/data/products.json';
+
+// Sitenin her yerinden garantili dinamik tepki almak için
+export const dynamic = 'force-dynamic';
 
 async function readProducts() {
   try {
-    // Vercel Blob'dan güncel ürün listesini oku
-    const { blobs } = await list({ prefix: 'db-products.json' });
-    const fileInfo = blobs.find(b => b.pathname === 'db-products.json');
-    if (fileInfo) {
-      // Vercel Blob CDN url'si cache'lenebilir, bu yüzden cache kırmak için timestamp ekliyoruz
-      const res = await fetch(fileInfo.url + '?t=' + Date.now(), { cache: 'no-store' });
+    // Vercel Blob'dan güncel ürün listesini oku (prefix: db-products)
+    const { blobs } = await list({ prefix: 'db-products' });
+    
+    // En son yüklenen dosyayı bul (Tarihe göre sırala ve ilkini al)
+    const sortedBlobs = blobs.sort((a, b) => b.uploadedAt.getTime() - a.uploadedAt.getTime());
+    
+    if (sortedBlobs.length > 0) {
+      const fileInfo = sortedBlobs[0];
+      const res = await fetch(fileInfo.url, { cache: 'no-store' });
       return await res.json();
     }
     return localProducts; // Blob boşsa statik veriyi döndür
@@ -20,10 +26,18 @@ async function readProducts() {
 
 async function writeProducts(data: any[]) {
   const jsonData = JSON.stringify(data, null, 2);
+  
+  // Önce eski dosyaları bulup sil (yer kaplamasın)
+  const { blobs } = await list({ prefix: 'db-products' });
+  if (blobs.length > 0) {
+    const urlsToDelete = blobs.map(b => b.url);
+    await del(urlsToDelete);
+  }
+
+  // Yeni dosyayı yeni benzersiz bir URL ile yükle (addRandomSuffix varsayılan olarak true)
   await put('db-products.json', jsonData, {
     access: 'public',
-    contentType: 'application/json',
-    addRandomSuffix: false
+    contentType: 'application/json'
   });
 }
 
