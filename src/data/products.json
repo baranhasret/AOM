@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1757937022065,
+    "name": "TC4S-14R",
+    "code": "TC4S-14R",
+    "image": "/uploads/1757937021800_images (1).jpeg",
+    "brand": "Autonics",
+    "desc": "Ebat : DIN G48×Y48mm Gösterim yöntemi : 4-hane 7-segment LED Kontrol yöntemi : AÇIK/KAPALI, P, PI, PD, PID Giriş dosyası : Termokopul K(CA), J(IC), L(IC) RTD: DPt100Ω, Cu50Ω Örnekleme hızı : 100ms Kontrol çıkışı : Röle (250VAC~ 3A) ya da SSR sürücü (12VDC specialstring) [ON/OFF, faz, saykıl] Besleme : 100-240VAC~ 50/60Hz",
+    "category": "Sıcaklık Kontrol Cihazları"
+  },
+  {
+    "id": 1757937077326,
+    "name": "TC4S-24R",
+    "code": "TC4S-24R",
+    "image": "/uploads/1757937126533_images (1).jpeg",
+    "brand": "Autonics",
+    "desc": "Ebat : DIN G48×Y48mm Gösterim yöntemi : 4-hane 7-segment LED Kontrol yöntemi : AÇIK/KAPALI, P, PI, PD, PID Giriş dosyası : Termokopul K(CA), J(IC), L(IC) RTD: DPt100Ω, Cu50Ω Örnekleme hızı : 100ms Kontrol çıkışı : Röle (250VAC~ 3A) ya da SSR sürücü (12VDC specialstring) [ON/OFF, faz, saykıl] Besleme : 100-240VAC~ 50/60Hz",
+    "category": "Sıcaklık Kontrol Cihazları"
+  },
+  {
+    "id": 1757937202716,
+    "name": "TK4S-14RN",
+    "code": "TK4S-14RN",
+    "image": "/uploads/1757937202444_images.png",
+    "brand": "Autonics",
+    "desc": "Gösterim yöntemi : 4-hane 7-segment LED Kontrol yöntemi : AÇIK/KAPALI, P, PI, PD, PID Giriş dosyası : Termokopul K(CA), J(IC), E(CR), T(CC), B(PR), R(PR), S(PR), N(NN), C(TT), G(TT), L(IC), U(CC), Platinel II RTD: DPt100Ω, DPt50Ω, JPt100Ω, Cu100Ω, Cu50Ω, Nikel 120Ω Analog: 0-100mV, 0-5V, 1-5V, 0-10V 0-20mA, 4-20mA Örnekleme hızı : 50ms Kontrol çıkışı 1 : Röle(250VAC~ 3A) Yardımcı çıkış : Alarm 1 Besleme : 100-240VAC~ 50/60Hz Koruma yapısı : IP65(ön panel)",
+    "category": "Sıcaklık Kontrol Cihazları"
+  },
+  {
+    "id": 1757937270742,
+    "name": "TX4S-B4S",
+    "code": "TX4S-B4S",
+    "image": "/uploads/1757937270463_TX4S.png",
+    "brand": "Autonics",
+    "desc": "Gösterim yöntemi : 4-hane 11-segment LCD Kontrol yöntemi : AÇIK/KAPALI, P, PI, PD, PID Giriş dosyası : Termokopul K(CA), J(IC), T(CC), R(PR), S(PR), L(IC) RTD: DPt100Ω, Cu50Ω Örnekleme hızı : 50ms Kontrol çıkışı : SSR drive(12VDC specialstring) [ON/OFF, faz, Saykıl]",
+    "category": "Sıcaklık Kontrol Cihazları"
+  },
+  {
+    "id": 1757937361196,
+    "name": "E50S8-500-3-T-1",
+    "code": "E50S8-500-3-T-1",
+    "image": "/uploads/1757937360926_e50s8-500-3-t-1-8m-8mm-500-phalse-24-v-1ab9b7.jpg",
+    "brand": "Autonics",
+    "desc": "Mil dış çapı : Ø8mm Azami Tepki frekansı : 300kHz Azami izin verilen devir : 5000rpm Başlama torku : Azami 70gf.cm(Azami 0.00686N.m) Çözünürlük : 500PPR Kontrol çıkışı : totempol Besleme : 5-24VDC specialstring Bağlantı türü : Arkadan Kablolu Koruma yapısı : IP50 (IEC standard)",
+    "category": "Encoderlar"
+  },
+  {
+    "id": 1757937677062,
+    "name": "E50S8-1024-3-T-1",
+    "code": "E50S8-1024-3-T-1",
+    "image": "/uploads/1757937676779_e50s8-500-3-t-1-8m-8mm-500-phalse-24-v-1ab9b7.jpg",
+    "brand": "Autonics",
+    "desc": "Mil dış çapı : Ø8mm Azami Tepki frekansı : 300kHz Azami izin verilen devir : 5000rpm Başlama torku : Azami 70gf.cm(Azami 0.00686N.m) Çözünürlük : 1024PPR Kontrol çıkışı : totempol Besleme : 5-24VDC specialstring Bağlantı türü : Arkadan Kablolu Koruma yapısı : IP50 (IEC standard)",
+    "category": "Encoderlar"
+  },
+  {
+    "id": 1757937730293,
+    "name": "E50S8-360-3-T-1",
+    "code": "E50S8-360-3-T-1",
+    "image": "/uploads/1757937812978_e50s8-500-3-t-1-8m-8mm-500-phalse-24-v-1ab9b7.jpg",
+    "brand": "Autonics",
+    "desc": "Mil dış çapı : Ø8mm Azami Tepki frekansı : 300kHz Azami izin verilen devir : 5000rpm Başlama torku : Azami 70gf.cm(Azami 0.00686N.m) Çözünürlük : 360PPR Kontrol çıkışı : totempol Besleme : 5-24VDC specialstring Bağlantı türü : Arkadan Kablolu Koruma yapısı : IP50 (IEC standard)",
+    "category": "Encoderlar"
+  },
+  {
+    "id": 1757937777590,
+    "name": "E50S8-100-3-T-1",
+    "code": "E50S8-100-3-T-1",
+    "image": "/uploads/1757937833787_e50s8-500-3-t-1-8m-8mm-500-phalse-24-v-1ab9b7.jpg",
+    "brand": "Autonics",
+    "desc": "Mil dış çapı : Ø8mm Azami Tepki frekansı : 300kHz Azami izin verilen devir : 5000rpm Başlama torku : Azami 70gf.cm(Azami 0.00686N.m) Çözünürlük : 100PPR Kontrol çıkışı : totempol Besleme : 5-24VDC specialstring Bağlantı türü : Arkadan Kablolu Koruma yapısı : IP50 (IEC standard)",
+    "category": "Encoderlar"
+  },
+  {
+    "id": 1757937928551,
+    "name": "Easy301-0808TN",
+    "code": "Easy301-0808TN",
+    "image": "/uploads/1757937928281_110000725510989.jpg",
+    "brand": "Inovance",
+    "desc": "Yüksek performanslı, kompakt, EtherCAT özellikli PLC  Kompakt tasarım En basitinden en karmaşık hareket kontrol özellikli PLC’ye kadar eksiksiz bir ürün yelpazesi PLCopen uyumlu eksen kontrolü Çevrimdışı hata ayıklama için simülasyon modu Gerçek zamanlı fieldbus Doğrusal ve dairesel enterpolasyon için eksen grubu, CAM tablosu işlevselliği Kapsülleme, kodun yeniden kullanılabilirliği ve ölçeklenebilirlik için fonksiyon bloğu ve fonksiyonu destekler ST, LD, SFC dil desteği Çoklu iletişim protokolleri: Modbus RTU/TCP CANopen (opsiyonel) Ethernet/IP (tarayıcı)",
+    "category": "PLC"
+  },
+  {
+    "id": 1757938031832,
+    "name": "Easy320-0808TN",
+    "code": "Easy320-0808TN",
+    "image": "/uploads/1757938031555_inovance-easy320-controller.jpg",
+    "brand": "Inovance",
+    "desc": "Yüksek performanslı, kompakt, EtherCAT özellikli PLC  Kompakt tasarım En basitinden en karmaşık hareket kontrol özellikli PLC’ye kadar eksiksiz bir ürün yelpazesi PLCopen uyumlu eksen kontrolü Çevrimdışı hata ayıklama için simülasyon modu Gerçek zamanlı fieldbus Doğrusal ve dairesel enterpolasyon için eksen grubu, CAM tablosu işlevselliği Kapsülleme, kodun yeniden kullanılabilirliği ve ölçeklenebilirlik için fonksiyon bloğu ve fonksiyonu destekler ST, LD, SFC dil desteği Çoklu iletişim protokolleri: Modbus RTU/TCP CANopen (opsiyonel) Ethernet/IP (tarayıcı)",
+    "category": "PLC"
+  },
+  {
+    "id": 1757938159253,
+    "name": "Easy302-0808TN",
+    "code": "Easy302-0808TN",
+    "image": "/uploads/1757938158978_H63bffcdbbe4244ccbaba17bc3661c93fp.png",
+    "brand": "Inovance",
+    "desc": "Ultra Kompact CPU, 8 giriş, 8 çıkış (NPN), 1x RS232, 1x RS485 desteği 1x RS232/485 genişletme ve 1x CAN genişletme desteği, Modbus RTU/ASC (16 Slave)",
+    "category": "PLC"
+  },
+  {
+    "id": 1757938246513,
+    "name": "Easy501-0808TN",
+    "code": "Easy501-0808TN",
+    "image": "/uploads/1757938246244_o1ei3n09c13t0txdn42vdbxcwgnwho7m.jpg",
+    "brand": "Inovance",
+    "desc": "Yüksek performanslı, kompakt, EtherCAT özellikli PLC  Kompakt tasarım En basitinden en karmaşık hareket kontrol özellikli PLC’ye kadar eksiksiz bir ürün yelpazesi PLCopen uyumlu eksen kontrolü Çevrimdışı hata ayıklama için simülasyon modu Gerçek zamanlı fieldbus Doğrusal ve dairesel enterpolasyon için eksen grubu, CAM tablosu işlevselliği Kapsülleme, kodun yeniden kullanılabilirliği ve ölçeklenebilirlik için fonksiyon bloğu ve fonksiyonu destekler ST, LD, SFC dil desteği Çoklu iletişim protokolleri: Modbus RTU/TCP CANopen (opsiyonel) Ethernet/IP (tarayıcı)",
+    "category": "PLC"
+  },
+  {
+    "id": 1757938369624,
+    "name": "DOP-107BV",
+    "code": "DOP-107BV",
+    "image": "/uploads/1757938369348_65375c91e7b58-65375c91f0a93.png",
+    "brand": "Delta",
+    "desc": "Ekran Boyutu: 7 inç Ekran Çözünürlüğü: Yüksek çözünürlük İşlemci: ARM Cortex-A8 çift çekirdekli, 800MHz (12” ve sonrası modellerde Dual Core 1GHz) Koruma Sınıfı: IP65 Haberleşme: BACnet ve OPC UA dahil 160 farklı cihazla haberleşme Dosya Desteği: PDF, CSV, TXT dosya gösterimi ve PDF çıktı alma Kamera Desteği: IP / Analog / VGA kamera ve girişlerle görüntü gösterme Uzaktan İzleme/Kontrol: VNCServer, Web Monitoring Gelişmiş Kodlama: LUA Script ile gelişmiş kodlama Veri Tabanı Desteği: eServer ile Access / MySQL gibi veritabanlarına kayıt alma Dosya Paylaşımı: FTP ile dosya paylaşımı",
+    "category": "HMI"
+  },
+  {
+    "id": 1757938444815,
+    "name": "DOP-110CS",
+    "code": "DOP-110CS",
+    "image": "/uploads/1757938463351_65375c91e7b58-65375c91f0a93.png",
+    "brand": "Delta",
+    "desc": "Ekran Boyutu: 10.1 inç Ekran Çözünürlüğü: Yüksek çözünürlük İşlemci: ARM Cortex-A8 çift çekirdekli, 800MHz (12” ve sonrası modellerde Dual Core 1GHz) Koruma Sınıfı: IP65 Haberleşme: BACnet ve OPC UA dahil 160 farklı cihazla haberleşme Dosya Desteği: PDF, CSV, TXT dosya gösterimi ve PDF çıktı alma Kamera Desteği: IP / Analog / VGA kamera ve girişlerle görüntü gösterme Uzaktan İzleme/Kontrol: VNCServer, Web Monitoring Gelişmiş Kodlama: LUA Script ile gelişmiş kodlama Veri Tabanı Desteği: eServer ile Access / MySQL gibi veritabanlarına kayıt alma Dosya Paylaşımı: FTP ile dosya paylaşımı",
+    "category": "HMI"
+  },
+  {
+    "id": 1757938691767,
+    "name": "DVP14SS211R",
+    "code": "DVP14SS211R",
+    "image": "/uploads/1757938691493_del-dvp14ss211r-dvp-ss2-plc-8di6do-rol-e61581.jpg",
+    "brand": "Delta",
+    "desc": "DELTA PLC BESLEME 24VDC 8 GİRİŞ 6 RÖLE ÇIKIŞLI CPU ÜNİTE",
+    "category": "PLC"
+  }
+]
