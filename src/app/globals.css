@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Sherman';
+  src: url('/Sherman-Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sherman';
+  src: url('/Sherman-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
