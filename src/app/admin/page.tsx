@@ -6,12 +6,14 @@ function ProductManager() {
   const [openBrand, setOpenBrand] = useState<string | null>(null);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [products, setProducts] = useState<Array<{id:number; name:string; code:string; image:string; brand:string; desc:string; category:string}>>([]);
+  const [loading, setLoading] = useState(true);
   // Ürünleri API'den yükle
   useEffect(() => {
-    fetch('/api/products')
-      .then(res => res.json())
-      .then(data => {
+    fetch("/api/products?t=" + Date.now())
+      .then((res) => res.json())
+      .then((data) => {
         setProducts(data);
+        setLoading(false);
       });
   }, []);
   const [name, setName] = useState('');
@@ -102,7 +104,8 @@ function ProductManager() {
     if (prod) {
       setName(prod.name);
       setCode(prod.code);
-      setImage(''); // Dosya inputu için boş bırakıyoruz
+      // Mevcut resmi saklayalım, eğer yeni resim seçilmezse bunu kullanacağız
+      setImage(prod.image); 
       setBrand(prod.brand);
       setDesc(prod.desc);
       setCategory(prod.category);
