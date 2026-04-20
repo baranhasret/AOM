@@ -15,6 +15,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Stencilia';
+  src: url('/Stencilia-A.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @custom-variant dark (&:is(.dark *));
 

@@ -126,12 +126,12 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
             />
             <div className="flex flex-col">
-              <span className={`text-4xl font-black tracking-wide transition-colors duration-300 ${shouldShowDark ? 'text-gray-900' : 'text-white'}`} style={{ fontFamily: 'Sherman, serif', ...(!shouldShowDark ? { textShadow: '1px 1px 3px rgba(0,0,0,0.5)' } : {}) }}>
+              <span className={`text-4xl font-black tracking-tight transition-colors duration-300 ${shouldShowDark ? 'text-gray-900' : 'text-white'} leading-[0.8]`} style={{ fontFamily: 'Stencilia, sans-serif', ...(!shouldShowDark ? { textShadow: '1px 1px 3px rgba(0,0,0,0.5)' } : {}) }}>
                 ANGORA
               </span>
               <span
-                className={`text-[11px] font-medium uppercase transition-colors duration-300 block ${shouldShowDark ? 'text-bordo-600' : 'text-white/80'}`}
-                style={{ textAlignLast: 'justify', fontFamily: 'Sherman, sans-serif' }}
+                className={`text-[16px] font-medium uppercase transition-colors duration-300 block ${shouldShowDark ? 'text-bordo-600' : 'text-white/80'} mt-1`}
+                style={{ textAlignLast: 'justify', fontFamily: 'Sherman, sans-serif', letterSpacing: '0.05em' }}
               >
                 Otomasyon | Mühendislik
               </span>
