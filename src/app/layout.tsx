@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://angoraotomasyon.com'),
+  metadataBase: new URL('https://aomtechnology.tr'),
   title: "AOM Engineering - Endüstriyel Otomasyon Çözümleri",
   description: "Endüstriyel otomasyon, robotik sistemler, medikal cihazlar ve oksijen jeneratörleri alanında uzman çözümler sunuyoruz.",
   keywords: "endüstriyel otomasyon, robotik sistemler, PLC, HMI, SCADA, medikal cihazlar, oksijen jeneratörü, otomasyon çözümleri, siemens, omron, yaskawa, schneider electric",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://angoraotomasyon.com',
+    url: 'https://aomtechnology.tr',
     siteName: 'AOM Engineering',
     title: 'AOM Engineering - Endüstriyel Otomasyon Çözümleri',
     description: 'Endüstriyel otomasyon, robotik sistemler, medikal cihazlar ve oksijen jeneratörleri alanında uzman çözümler sunuyoruz.',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     google: 'HPRpO21tjglT23_eh6PmJce8CA9eQyTy_EwgzNyk25E',
   },
   alternates: {
-    canonical: 'https://angoraotomasyon.com',
+    canonical: 'https://aomtechnology.tr',
   },
   icons: {
     icon: [
@@ -98,8 +98,8 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "AOM Engineering",
     "alternateName": "Angora Otomasyon",
-    "url": "https://angoraotomasyon.com",
-    "logo": "https://angoraotomasyon.com/Küre.png",
+    "url": "https://aomtechnology.tr",
+    "logo": "https://aomtechnology.tr/Küre.png",
     "description": "Endüstriyel otomasyon, robotik sistemler, medikal cihazlar ve oksijen jeneratörleri alanında uzman çözümler.",
     "address": {
       "@type": "PostalAddress",
@@ -123,7 +123,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "AOM Engineering",
-    "image": "https://angoraotomasyon.com/Küre.png",
+    "image": "https://aomtechnology.tr/Küre.png",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "TR",
@@ -138,7 +138,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        <link rel="canonical" href="https://angoraotomasyon.com" />
+        <link rel="canonical" href="https://aomtechnology.tr" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

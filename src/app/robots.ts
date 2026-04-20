@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin', '/api'],
     },
-    sitemap: 'https://angoraotomasyon.com/sitemap.xml',
+    sitemap: 'https://aomtechnology.tr/sitemap.xml',
   }
 }

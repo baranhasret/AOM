@@ -3,7 +3,7 @@ import productsData from '@/data/products.json'
 import blogData from '@/data/blog.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://angoraotomasyon.com'
+  const baseUrl = 'https://aomtechnology.tr'
   const currentDate = new Date()
 
   // Ürün URL'lerini oluştur
