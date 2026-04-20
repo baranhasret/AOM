@@ -1,56 +1,51 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { cache, withRateLimit } from '@/lib/cache';
+import { put, list } from '@vercel/blob';
+import localProducts from '@/data/products.json';
 
-const productsFile = path.join(process.cwd(), 'src/data/products.json');
-const CACHE_KEY = 'products_list';
-const CACHE_TTL = 300; // 5 minutes
-
-function readProducts() {
-  return fs.existsSync(productsFile)
-    ? JSON.parse(fs.readFileSync(productsFile, 'utf-8'))
-    : [];
-}
-
-function writeProducts(data: any[]) {
-  fs.writeFileSync(productsFile, JSON.stringify(data, null, 2));
-  // Invalidate cache when products are updated
-  cache.delete(CACHE_KEY);
-}
-
-export const GET = withRateLimit(async () => {
+async function readProducts() {
   try {
-    // Check cache first
-    const cachedData = cache.get<any[]>(CACHE_KEY);
-    if (cachedData) {
-      return NextResponse.json(cachedData, {
-        headers: {
-          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-          'X-Cache': 'HIT',
-        },
-      });
+    // Vercel Blob'dan güncel ürün listesini oku
+    const { blobs } = await list({ prefix: 'db-products.json' });
+    const fileInfo = blobs.find(b => b.pathname === 'db-products.json');
+    if (fileInfo) {
+      const res = await fetch(fileInfo.url, { cache: 'no-store' });
+      return await res.json();
     }
+    return localProducts; // Blob boşsa statik veriyi döndür
+  } catch (e) {
+    return localProducts;
+  }
+}
 
-    // If not in cache, read from file
-    const data = readProducts();
-    cache.set(CACHE_KEY, data, CACHE_TTL);
-    
+async function writeProducts(data: any[]) {
+  const jsonData = JSON.stringify(data, null, 2);
+  await put('db-products.json', jsonData, {
+    access: 'public',
+    contentType: 'application/json',
+    addRandomSuffix: false
+  });
+}
+
+export const GET = async () => {
+  try {
+    const data = await readProducts();
+    // Cache'lenmesini engellemek için headers ekliyoruz
     return NextResponse.json(data, {
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-        'X-Cache': 'MISS',
-      },
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
     });
   } catch (err) {
     return NextResponse.json([], { status: 500 });
   }
-});
+};
 
 export const POST = async (request: Request) => {
   try {
     const body = await request.json();
-    const data = readProducts();
+    const data = await readProducts();
     const newProduct = {
       id: Date.now(),
       name: body.name,
@@ -61,7 +56,7 @@ export const POST = async (request: Request) => {
       category: body.category || ''
     };
     data.push(newProduct);
-    writeProducts(data);
+    await writeProducts(data);
     return NextResponse.json(newProduct);
   } catch (err) {
     return NextResponse.json({ success: false }, { status: 500 });
@@ -71,7 +66,7 @@ export const POST = async (request: Request) => {
 export const PUT = async (request: Request) => {
   try {
     const body = await request.json();
-    let data = readProducts();
+    let data = await readProducts();
     data = data.map((p: any) =>
       p.id === body.id
         ? {
@@ -85,7 +80,7 @@ export const PUT = async (request: Request) => {
           }
         : p
     );
-    writeProducts(data);
+    await writeProducts(data);
     return NextResponse.json({ success: true });
   } catch (err) {
     return NextResponse.json({ success: false }, { status: 500 });
@@ -95,9 +90,9 @@ export const PUT = async (request: Request) => {
 export const DELETE = async (request: Request) => {
   try {
     const body = await request.json();
-    let data = readProducts();
-  data = data.filter((p: any) => p.id !== body.id);
-    writeProducts(data);
+    let data = await readProducts();
+    data = data.filter((p: any) => p.id !== body.id);
+    await writeProducts(data);
     return NextResponse.json({ success: true });
   } catch (err) {
     return NextResponse.json({ success: false }, { status: 500 });

@@ -1,17 +1,18 @@
 import { NextResponse } from 'next/server';
-import { writeFile } from 'fs/promises';
-import path from 'path';
+import { put } from '@vercel/blob';
 
 export async function POST(request: Request) {
-  const data = await request.formData();
-  const file = data.get('file') as File;
-  if (!file) {
-    return NextResponse.json({ error: 'Dosya bulunamadı.' }, { status: 400 });
+  try {
+    const data = await request.formData();
+    const file = data.get('file') as File;
+    if (!file) {
+      return NextResponse.json({ error: 'Dosya bulunamadı.' }, { status: 400 });
+    }
+    
+    // Upload the file to Vercel Blob
+    const blob = await put(file.name, file, { access: 'public' });
+    return NextResponse.json({ url: blob.url });
+  } catch (error) {
+    return NextResponse.json({ error: 'Yükleme hatası oluştu' }, { status: 500 });
   }
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-  const fileName = `${Date.now()}_${file.name}`;
-  const filePath = path.join(process.cwd(), 'public', 'uploads', fileName);
-  await writeFile(filePath, buffer);
-  return NextResponse.json({ url: `/uploads/${fileName}` });
 }
