@@ -8,7 +8,8 @@ async function readProducts() {
     const { blobs } = await list({ prefix: 'db-products.json' });
     const fileInfo = blobs.find(b => b.pathname === 'db-products.json');
     if (fileInfo) {
-      const res = await fetch(fileInfo.url, { cache: 'no-store' });
+      // Vercel Blob CDN url'si cache'lenebilir, bu yüzden cache kırmak için timestamp ekliyoruz
+      const res = await fetch(fileInfo.url + '?t=' + Date.now(), { cache: 'no-store' });
       return await res.json();
     }
     return localProducts; // Blob boşsa statik veriyi döndür
